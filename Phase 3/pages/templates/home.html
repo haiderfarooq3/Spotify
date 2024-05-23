@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ezstream Home</title>
+    <link rel="stylesheet" type="text/css" href="/static/site.css">
+</head>
+<body id="index">
+    <section class="hero">
+        <div class="containerI">
+            <h1>Welcome to ezstream</h1>
+            <p>Your path to a better music experience starts here.</p>
+            <a class="button" href="/login">Get Started</a>
+        </div>
+    </section>
+    <nav>
+        <div class= "containerI2">
+        <ul>
+            <li><a href="/signup">Sign Up</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/genres">Favourite Genres</a></li>
+            <li><a href="/your_music?user_email=test@example.com">Your Music</a></li>
+            <li><a href="/recommended_music">Recommended Music</a></li>
+            <li><a href="{{ url_for('all_music') }}">All Music</a></li>
+        </ul>
+        </div>
+    </nav>
+    <div class="containerI3">
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>Personalized Music</h3>
+                <p>ezstream uses your music preferences to recommend music that you will love.</p>
+            </div>
+            <div class="feature">
+                <h3>Music Library</h3>
+                <p>ezstream allows you to store your music in one place, making it easy to access.</p>
+            </div>
+            <div class="feature">
+                <h3>Music Recommendations</h3>
+                <p>ezstream recommends music based on your preferences, making it easy to discover new music.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

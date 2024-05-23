@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Music</title>
+    <link rel="stylesheet" type="text/css" href="/static/site.css">
+</head>
+<body>
+    <h1>Your Music</h1>
+    <ul>
+        {% for song in user_music %}
+        <li>{{ song }}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('recommended_music') }}" method="get">
+        <input type="hidden" name="user_email" value="{{ user_email }}">
+        <button type="submit">Get Recommendations</button>
+    </form>
+</body>
+</html>

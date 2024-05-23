@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Music</title>
+    <link rel="stylesheet" type="text/css" href="/static/site.css">
+</head>
+<body>
+    <h1>Recommended Music</h1>
+    <ul>
+        {% for track_id in recommended_music %}
+        <li><a href="{{ url_for('get_audio', filename=track_id + '.mp3') }}">Track ID: {{ track_id }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

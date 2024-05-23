@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}All Music{% endblock %}
+
+{% block content %}
+<h1>All Music</h1>
+<div class="music-grid">
+    {% for audio in audio_files %}
+        <div class="music-item">
+            <a href="{{ url_for('get_audio', filename=audio) }}">{{ audio }}</a>
+            <audio controls>
+                <source src="{{ url_for('get_audio', filename=audio) }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

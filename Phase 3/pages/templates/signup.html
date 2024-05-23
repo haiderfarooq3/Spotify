@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ezstream Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="/static/site.css">
+</head>
+<body>
+    <nav>
+        <div class="containerI2">
+            <ul>
+                <li><a href="/signup">Sign Up</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/genres">Favourite Genres</a></li>
+                <li><a href="/your_music?user_email=test@example.com">Your Music</a></li>
+                <li><a href="/recommended_music">Recommended Music</a></li>
+            </ul>
+        </div>
+    </nav>
+    <form method="post">
+        <div class="LogInput">
+            <h1>Sign Up</h1>
+            <div class="form-group">
+                <div class="UName">
+                    <label>Name:</label>
+                    <input type="text" name="name" required />
+                </div>
+                <div class="UName">
+                    <label>Email:</label>
+                    <input type="email" name="email" required />
+                </div>
+                <div class="UName">
+                    <label>Birthday:</label>
+                    <input type="text" name="birthday" required />
+                </div>
+                <div class="Pass">
+                    <label>Password:</label>
+                    <input type="password" name="password" required />
+                </div>
+            </div>
+            <div class="Login">
+                <button class="buttonL" type="submit">Sign Up</button>
+            </div>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="flashes">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+        </div>
+    </form>
+</body>
+</html>
